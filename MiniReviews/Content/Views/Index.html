@@ -1,0 +1,13 @@
+﻿<div ng-controller="mainController">
+    <h2>Main Page</h2>
+
+    <div class="col-sm-12" ng-repeat="place in places">
+        <blockquote>
+            <h4>Name: {{place.Name}}</h4>
+            <h7>Type: {{place.Type}}</h7><br/>
+            <h7>Total Reviews: {{place.Review.length}}</h7><br/>
+            <h7>Average Rate: {{calculateAverage(place.Review)}}</h7><br />
+            <button ng-click="Redirect(place)" class="btn">Details</button>
+        </blockquote>
+    </div>
+</div>

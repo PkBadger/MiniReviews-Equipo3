@@ -1,0 +1,17 @@
+﻿<div ng-controller="detailsController">
+    
+    <h1>Place Details</h1>
+    <div ng-bind-html="nameB">{{name(place)}}</div>
+    <div ng-bind-html="typeB"></div>
+    <div ng-bind-html="promedio"></div> 
+    <h4>Reviews:</h4>
+    <div ng-repeat="review in place.Review">
+        <blockquote>
+            {{showReview(review)}}
+            <div ng-bind-html="reviewer"></div>
+            <div ng-bind-html="rate"></div>
+            <div ng-bind-html="comments"></div>
+            </blockquote>
+    </div>
+   
+</div>
